@@ -155,7 +155,11 @@ fun Page(
                 .fillMaxWidth()
                 .size(height = 500.dp, width = 500.dp)
         )
-        Text(text = )
+        Text(
+            text = stringResource(textTitle),
+            fontSize = 40.sp,
+            modifier =  Modifier
+        )
         Text(text = )
     }
 }
