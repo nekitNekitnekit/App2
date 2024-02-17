@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.app2.ui.theme.App2Theme
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +39,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+    )
 @Composable
 fun App2Preview() {
     App2Theme {
@@ -50,11 +54,11 @@ fun App2Preview() {
 fun App2(modifier: Modifier = Modifier) {
     Column {
 
-        Image(painter = painterResource(R.drawable.image), contentDescription = "Image")
+        Image(painter = painterResource(R.drawable.image1), contentDescription = "Image")
 
-        Text("Header 1", style = MaterialTheme.typography.h5)
+        Text("Header 1", fontSize = 40.sp, lineHeight = 40.sp)
 
-        Text("Header 2", style = MaterialTheme.typography.h6)
+        Text("Header 2", fontSize = 20.sp, lineHeight = 20.sp)
 
         Row {
             Button(onClick = { /*...*/ }) {
