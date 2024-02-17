@@ -97,6 +97,14 @@ fun App2(modifier: Modifier = Modifier) {
         else -> R.string.info8
     }
 
+    if (currentState == 2 || currentState == 3 || currentState == 4
+        || currentState == 5 || currentState == 6
+        || currentState == 7 || currentState == 8) {
+        currentState -= 1
+    } else if (currentState == 1) {
+        currentState = 8
+    }
+
     Column (
         modifier = Modifier
             .statusBarsPadding()
