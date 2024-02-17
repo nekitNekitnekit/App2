@@ -8,7 +8,9 @@ import androidx.activity.compose.setContent
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -32,6 +34,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -105,14 +108,6 @@ fun App2(modifier: Modifier = Modifier) {
         else -> R.string.info8
     }
 
-    if (currentState == 2 || currentState == 3 || currentState == 4
-        || currentState == 5 || currentState == 6
-        || currentState == 7 || currentState == 8) {
-        currentState -= 1
-    } else if (currentState == 1) {
-        currentState = 8
-    }
-
     Column (
         modifier = Modifier
             .statusBarsPadding()
@@ -182,15 +177,28 @@ fun Page(
                 .fillMaxWidth()
                 .size(height = 500.dp, width = 500.dp)
         )
-        Text(
-            text = stringResource(textTitle),
-            fontSize = 40.sp,
-            modifier =  Modifier
-        )
-        Text(
-            text = stringResource(textInfo),
-            fontSize = 20.sp,
-            modifier =  Modifier
-        )
+        Box(
+            modifier = Modifier
+                .background(Color.LightGray)
+                .padding(10.dp)
+        ) {
+
+            Column (
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = stringResource(textTitle),
+                    fontSize = 40.sp,
+                    modifier = Modifier
+                )
+
+                Text(
+                    text = stringResource(textInfo),
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                )
+            }
+
+        }
     }
 }
