@@ -127,7 +127,12 @@ fun App2(modifier: Modifier = Modifier) {
             textInfo = textInfo
         )
 
-        Row {
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 25.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ){
             Button(onClick = { /*...*/ }) {
                 Text("Button 1")
             }
