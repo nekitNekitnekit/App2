@@ -76,7 +76,8 @@ fun App2(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center
     ) {
 
-        Image(painter = painterResource(R.drawable.image1), contentDescription = "Image")
+        Image(painter = painterResource(images[currentImageIndex]),
+            contentDescription = "Image $currentImageIndex")
 
         Text("Header 1", fontSize = 40.sp, lineHeight = 40.sp)
 
