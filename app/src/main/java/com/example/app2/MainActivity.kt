@@ -61,10 +61,18 @@ fun App2Preview() {
 @Composable
 fun App2(modifier: Modifier = Modifier) {
 
-    val images = listOf(R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4,
-        R.drawable.image5, R.drawable.image6, R.drawable.image7, R.drawable.image8,)
+    var currentState by remember { mutableStateOf(1)    }
 
-    var currentImageIndex by remember { mutableStateOf(0) }
+    val image = when(currentState){
+        1 -> R.drawable.image1
+        2 -> R.drawable.image2
+        3 -> R.drawable.image3
+        4 -> R.drawable.image4
+        5 -> R.drawable.image5
+        6 -> R.drawable.image6
+        7 -> R.drawable.image7
+        else -> R.drawable.image8
+    }
 
     Column (
         modifier = Modifier
@@ -76,8 +84,7 @@ fun App2(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center
     ) {
 
-        Image(painter = painterResource(images[currentImageIndex]),
-            contentDescription = "Image $currentImageIndex")
+        Image(painter = painterResource(image))
 
         Text("Header 1", fontSize = 40.sp, lineHeight = 40.sp)
 
