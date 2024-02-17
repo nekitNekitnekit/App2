@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">App2</string>
+    <string name="title1">Picture 1</string>
+    <string name="title2">Picture 2</string>
+    <string name="title3">Picture 3</string>
+    <string name="title4">Picture 4</string>
+    <string name="title5">Picture 5</string>
+    <string name="title6">Picture 6</string>
+    <string name="title7">Picture 7</string>
+    <string name="title8">Picture 8</string>
 </resources>

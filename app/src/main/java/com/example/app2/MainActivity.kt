@@ -25,6 +25,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -72,6 +73,17 @@ fun App2(modifier: Modifier = Modifier) {
         6 -> R.drawable.image6
         7 -> R.drawable.image7
         else -> R.drawable.image8
+    }
+
+    val textTitle = when(currentState){
+        1 -> R.string.title1
+        2 -> R.string.title2
+        3 -> R.string.title3
+        4 -> R.string.title4
+        5 -> R.string.title5
+        6 -> R.string.title6
+        7 -> R.string.title7
+        else -> R.string.title8
     }
 
     Column (
