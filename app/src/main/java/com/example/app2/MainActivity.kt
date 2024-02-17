@@ -146,7 +146,9 @@ fun Page(
     @StringRes textTitle: Int,
     @StringRes textInfo: Int
 ){
-    Column {
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Image(
             painter = painterResource(image),
 
