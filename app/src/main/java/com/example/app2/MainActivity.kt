@@ -1,8 +1,12 @@
 package com.example.app2
 
+import android.graphics.pdf.PdfDocument.Page
+import android.media.Image
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -115,12 +119,6 @@ fun App2(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center
     ) {
 
-        Image(painter = painterResource(image))
-
-        Text("Header 1", fontSize = 40.sp, lineHeight = 40.sp)
-
-        Text("Header 2", fontSize = 20.sp, lineHeight = 20.sp)
-
         Row {
             Button(onClick = { /*...*/ }) {
                 Text("Button 1")
@@ -133,3 +131,10 @@ fun App2(modifier: Modifier = Modifier) {
 
     }
 }
+
+@Composable
+fun Page(
+    @DrawableRes image: Int,
+    @StringRes textTitle: Int,
+    @StringRes textInfo: Int
+)
