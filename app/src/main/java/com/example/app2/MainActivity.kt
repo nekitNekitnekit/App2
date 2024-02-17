@@ -160,6 +160,10 @@ fun Page(
             fontSize = 40.sp,
             modifier =  Modifier
         )
-        Text(text = )
+        Text(
+            text = stringResource(textInfo),
+            fontSize = 20.sp,
+            modifier =  Modifier
+        )
     }
 }
