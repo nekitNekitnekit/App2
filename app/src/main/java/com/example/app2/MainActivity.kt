@@ -180,7 +180,8 @@ fun Page(
         Box(
             modifier = Modifier
                 .background(Color.LightGray)
-                .padding(10.dp)
+                .padding(horizontal = 50.dp)
+                .padding(vertical = 15.dp)
         ) {
 
             Column (
