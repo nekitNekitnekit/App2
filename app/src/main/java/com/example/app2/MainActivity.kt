@@ -149,8 +149,16 @@ fun App2(modifier: Modifier = Modifier) {
                 Text(text = "Previous")
             }
 
-            Button(onClick = { /*...*/ }) {
-                Text("Button 2")
+            Button(onClick = {
+                if (currentState == 1 || currentState == 2 || currentState == 3
+                    || currentState == 4 || currentState == 5
+                    || currentState == 6 || currentState == 7) {
+                currentState += 1
+            } else if (currentState == 8) {
+                currentState = 1
+            }
+            }) {
+                Text(text = "Next")
             }
         }
 
