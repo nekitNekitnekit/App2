@@ -12,8 +12,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -119,6 +121,12 @@ fun App2(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center
     ) {
 
+        Page(
+            image = image,
+            textTitle = textTitle,
+            textInfo = textInfo
+        )
+
         Row {
             Button(onClick = { /*...*/ }) {
                 Text("Button 1")
@@ -137,4 +145,17 @@ fun Page(
     @DrawableRes image: Int,
     @StringRes textTitle: Int,
     @StringRes textInfo: Int
-)
+){
+    Column {
+        Image(
+            painter = painterResource(image),
+
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxWidth()
+                .size(height = 500.dp, width = 500.dp)
+        )
+        Text(text = )
+        Text(text = )
+    }
+}
