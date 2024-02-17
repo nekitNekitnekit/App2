@@ -8,4 +8,12 @@
     <string name="title6">Picture 6</string>
     <string name="title7">Picture 7</string>
     <string name="title8">Picture 8</string>
+    <string name="info1">Info 1</string>
+    <string name="info2">Info 2</string>
+    <string name="info3">Info 3</string>
+    <string name="info4">Info 4</string>
+    <string name="info5">Info 5</string>
+    <string name="info6">Info 6</string>
+    <string name="info7">Info 7</string>
+    <string name="info8">Info 8</string>
 </resources>

@@ -86,6 +86,17 @@ fun App2(modifier: Modifier = Modifier) {
         else -> R.string.title8
     }
 
+    val textInfo = when(currentState){
+        1 -> R.string.info1
+        2 -> R.string.info2
+        3 -> R.string.info3
+        4 -> R.string.info4
+        5 -> R.string.info5
+        6 -> R.string.info6
+        7 -> R.string.info7
+        else -> R.string.info8
+    }
+
     Column (
         modifier = Modifier
             .statusBarsPadding()
